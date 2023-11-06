@@ -1,0 +1,229 @@
+@font-face {
+    font-family: gilroy-bold;
+    src: url("../fonts/Gilroy-Black.ttf");
+}
+@font-face {
+    font-family: gilroy;
+    src: url("../fonts/Gilroy-Medium.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    font-weight: 700;
+}
+
+.dark{
+    color: whitesmoke !important;
+    background-color: rgb(2, 2, 27);
+    .options li a ,
+    .sec-color {
+        color: whitesmoke;
+    }
+    transition: all 0.4s linear;
+}
+
+.light{
+    transition: all 0.4s linear;
+}
+
+#main{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden ;
+}
+.navbar{
+    padding: 10px ;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    border: 1px solid blueviolet;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.logo{
+    font-size: 2.5vw;
+    font-weight: 900;
+    font-family: gilroy-bold;
+}
+
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.options li{
+    list-style-type: none;
+}
+
+.options li:hover{
+    scale: 1.2;
+    color: blueviolet;
+}
+
+.options li a{
+    text-decoration: none;
+    color: black;
+}
+
+.options li a:hover{
+    color: blueviolet;
+}
+
+.addUsers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid blueviolet;
+}
+
+.form{
+    display: flex;
+    width: 80%;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form > input {
+    width: 100%;
+    padding: 8px 6px;
+    margin: 8px 0;
+}
+
+.form > button {
+    align-self: center;
+}
+
+button {
+    color: white;
+    background-color: palevioletred;
+    border: 1px solid palegoldenrod;
+    border-radius: 10px;
+    padding: 8px 10px;
+    margin: 8px 0;
+}
+
+button:hover{
+    box-shadow: 0px 0px 6px 2px rgb(241, 2, 10);
+}
+
+.myUsers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn{
+    font-size: 0.7rem;
+    color: white;
+    background-color: rgb(136, 129, 129);
+    padding: 4px 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    
+}
+
+.myUsers > h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.users{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.user{
+    border: 1px solid blueviolet;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin: 10px 12px;
+    transition: all 0.2s linear;
+}
+
+.user:hover{
+    box-shadow: 0px 0px 6px 2px blueviolet ;
+}
+
+.user > .userName {
+    font-family: gilroy-bold;
+    padding: 8px 10px;
+}
+
+.user > .dateJoin::before{
+    content: "Joined: ";
+    padding: 8px 10px;
+}
+
+.user > .dateJoin {
+    color: gray;
+    font-size: 0.8em;
+}
+
+.btnWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 8px 10px;
+}
+
+.userInfoWrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.userInfo{
+    width: 80%;
+    border: 1px solid blueviolet;
+    padding: 10px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#password{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.gray{
+    color: gray;
+}
+
+.sec-color {
+    color: #130e0e;
+}
+
+.font-size-sm{
+    font-size: 0.8rem;
+}
