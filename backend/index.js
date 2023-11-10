@@ -2,14 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const dotenv = require('dotenv').config() ;
+const server = express();
+require('dotenv').config() ;
 const port = process.env.PORT || 8080 ;
 const server = express();
-
-console.log(process.env.URI);
-
 mongoose.connect(process.env.URI+`myUsers`);
-console.log('db connected');
+// console.log('db connected');
 
 const userSchema = new mongoose.Schema({
     username: String,
