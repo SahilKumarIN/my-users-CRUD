@@ -6,7 +6,7 @@ const server = express();
 require('dotenv').config() ;
 console.log(process.env.URI);
 const port = process.env.PORT || 8080 ;
-mongoose.connect(process.env.URI+`myUsers`);
+mongoose.connect(process.env.URI+"myUsers");
 console.log('db connected');
 
 const userSchema = new mongoose.Schema({
