@@ -4,7 +4,7 @@ export default function Users(props) {
 
   const handleDel = async (e) =>{
     const userId = e.target.value;
-    const resp = await fetch("http://localhost:5000/del-user" , {
+    const resp = await fetch("https://my-users-crud-mern.onrender.com/del-user" , {
     method: "POST",
     headers:{
       "Content-Type": "application/json"

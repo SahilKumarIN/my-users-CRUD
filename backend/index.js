@@ -31,7 +31,6 @@ server.use(bodyParser.json());
 // API's
 server.post('/add-user' , (req,res)=>{
     res.send(req.body);
-    // console.log(req.body);
     const user = new User({
         username: req.body.username,
         email: req.body.email,
@@ -47,18 +46,18 @@ server.get('/get-user' , (req,res)=>{
             res.send(foundUser);
         })
         .catch (err=> {
-            console.log("Error occured while getting from db.")
-});
+            alert("Currently No User Found!!!")
+        });
 });
 
 server.post('/del-user' , (req,res)=>{
     const id = req.body.id;
-    // res.send(req.body.id)
     User.findByIdAndDelete(id).then(res.send("User Deleted")).catch(err=>{console.log(err);})
 });
 
 
 
 server.listen(port ,()=>{
-    console.log("Server Started at "+port+"....");
+    // console.log("Server Started at "+port+"....");
+    console.log("Server started");
 })
