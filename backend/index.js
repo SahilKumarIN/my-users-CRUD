@@ -2,9 +2,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-
+const dotenv = require('dotenv').config() ;
+const port = process.env.PORT || 8080 ;
 const server = express();
-mongoose.connect("mongodb://127.0.0.1:27017/testUsers");
+mongoose.connect(process.env.URI+`myUsers`);
 console.log('db connected');
 
 const userSchema = new mongoose.Schema({
@@ -58,6 +59,6 @@ server.post('/del-user' , (req,res)=>{
 
 
 
-server.listen(8080,()=>{
-    console.log("Server Started at 8080....");
+server.listen(port ,()=>{
+    console.log("Server Started at "+port+"....");
 })

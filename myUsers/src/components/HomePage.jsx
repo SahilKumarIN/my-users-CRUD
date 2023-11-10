@@ -14,7 +14,7 @@ export default function HomePage() {
     e.preventDefault();
     if (name !== "" && pass !== "" && mail !== "" && contact !== "") {
       
-      await fetch("http://localhost:8080/add-user", {
+      await fetch("http://localhost:5000/add-user", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -57,7 +57,7 @@ export default function HomePage() {
 
   const showUsers = async (e) => {
     setIsLoading(true);
-    const response = await fetch("http://localhost:8080/get-user", {
+    const response = await fetch("http://localhost:5000/get-user", {
       method: "GET"
     });
     const newresponse = await response.json();
