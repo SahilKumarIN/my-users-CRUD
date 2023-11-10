@@ -4,10 +4,10 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const server = express();
 require('dotenv').config() ;
+console.log(process.env.URI);
 const port = process.env.PORT || 8080 ;
-const server = express();
 mongoose.connect(process.env.URI+`myUsers`);
-// console.log('db connected');
+console.log('db connected');
 
 const userSchema = new mongoose.Schema({
     username: String,
